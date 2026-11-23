@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Simulasi SAS Kelas VII</title>
+<style>
+:root{--bg:#f4f6fb;--c:#fff;--t:#1d2433;--p:#2c4a8a;--g:#1e9e5a;--r:#d33;--b:#d9deea}
+@media(prefers-color-scheme:dark){:root{--bg:#12151c;--c:#1c212c;--t:#e8ebf3;--p:#7fa2ff;--b:#333b4d}}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,sans-serif;background:var(--bg);color:var(--t);line-height:1.5}
+.w{max-width:760px;margin:auto;padding:14px}.card{background:var(--c);border:1px solid var(--b);border-radius:12px;padding:14px;margin:10px 0}
+button{font:inherit;cursor:pointer;border:0;border-radius:8px;padding:10px 14px;background:var(--p);color:#fff}
+button.o{background:none;border:1px solid var(--b);color:var(--t)}input{font:inherit;width:100%;padding:10px;border-radius:8px;border:1px solid var(--b);background:var(--c);color:var(--t)}
+.top{position:sticky;top:0;background:var(--c);border-bottom:1px solid var(--b);padding:8px 14px;display:flex;justify-content:space-between;align-items:center;z-index:5}
+.tm{font-weight:700;color:var(--r)}.opt{display:block;width:100%;text-align:left;margin:6px 0;padding:10px;border:1px solid var(--b);border-radius:8px;background:none;color:var(--t)}
+.opt.s{border-color:var(--p);background:rgba(80,120,220,.15)}.opt.ok{border-color:var(--g);background:rgba(30,158,90,.18)}.opt.no{border-color:var(--r);background:rgba(220,50,50,.15)}
+.nav{display:flex;flex-wrap:wrap;gap:5px}.nav b{width:34px;height:34px;display:grid;place-items:center;border:1px solid var(--b);border-radius:6px;cursor:pointer;font-weight:400}
+.nav b.d{background:var(--p);color:#fff}.nav b.c{outline:2px solid var(--r)}.pas{background:rgba(120,120,120,.12);border-left:4px solid var(--p);padding:10px;border-radius:6px;font-size:.95em;max-height:260px;overflow:auto}
+.ex{background:rgba(255,200,0,.14);padding:8px;border-radius:6px;margin-top:8px;font-size:.93em}.row{display:flex;gap:8px;justify-content:space-between}.big{font-size:3em;font-weight:800;text-align:center;color:var(--p)}
+.tag{font-size:.75em;background:var(--p);color:#fff;border-radius:4px;padding:2px 6px}.hide{display:none}
+</style></head><body><div class="w" id="app"></div>
+<script>
+const TOKEN="ambatron12345";
+let S={},IDX=[];
+let cur,A,idx,t0,iv,done;const $=s=>document.querySelector(s),app=$("#app");
+const mm=()=>{app.innerHTML='<h2>📝 Simulasi SAS Ganjil · Kelas VII</h2><p>Pilih mata pelajaran:</p>'+IDX.map(m=>'<div class="card"><b>'+m.nama+'</b><br><small>Jadwal: '+m.hari+' · '+m.jumlah+' soal · '+m.durasi+' menit</small><br><br><button onclick="tk(\''+m.id+'\')">Mulai</button></div>').join("")};
+async function init(){try{IDX=await(await fetch("data/index.json")).json();mm()}catch(e){app.innerHTML='<div class="card">Gagal memuat data soal. Buka lewat GitHub Pages atau server lokal (python -m http.server), bukan klik file langsung.</div>'}}
+async function tk(k){const v=prompt("Masukkan TOKEN ujian:");if(v===null)return;if(v.trim()!==TOKEN){alert("Token salah / tidak ada. Kamu tidak dapat mengerjakan ujian. Tanyakan token ke pengawas.");return}
+if(!S[k]){try{const m=IDX.find(x=>x.id==k),d=await(await fetch("data/"+k+".json")).json();S[k]={n:m.nama,hari:m.hari,Q:d.map(x=>[x.tipe,x.soal,x.opsi,x.kunci,x.pembahasan,x.bacaan])}}catch(e){alert("Gagal memuat soal.");return}}
+start(k)}
+function start(k){cur=k;A=S[k].Q.map(q=>q[0]=="mc"?[]:q[0]=="cat"?q[2].map(_=>null):null);idx=0;done=false;t0=Date.now()+90*60000;iv=setInterval(tick,1000);draw()}
+function tick(){let s=Math.max(0,Math.round((t0-Date.now())/1000));const e=$("#tm");if(e)e.textContent=String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0");if(!s){clearInterval(iv);alert("Waktu habis!");fin()}}
+const ans=i=>{const a=A[i],t=S[cur].Q[i][0];return t=="pg"?a!==null:t=="mc"?a.length>0:a.every(x=>x!==null)};
+function draw(){const Q=S[cur].Q,q=Q[idx],t=q[0];let h=`<div class="top"><b>${S[cur].n}</b><span class="tm" id="tm"></span><button onclick="if(confirm('Kumpulkan jawaban sekarang?'))fin()">Kumpulkan</button></div><div class="card nav">${Q.map((_,i)=>`<b class="${ans(i)?'d':''} ${i==idx?'c':''}" onclick="idx=${i};draw()">${i+1}</b>`).join("")}</div><div class="card">`;
+if(q[5])h+=`<div class="pas">${q[5]}</div><br>`;
+h+=`<span class="tag">${t=="pg"?"Pilihan Ganda":t=="mc"?"PG Kompleks (pilih lebih dari satu)":"PG Kategori (Benar/Salah)"}</span><p><b>${idx+1}.</b> ${q[1].replace(/\n/g,"<br>")}</p>`;
+if(t=="pg")q[2].forEach((o,i)=>h+=`<button class="opt ${A[idx]===i?'s':''}" onclick="A[idx]=${i};draw()">${"ABCD"[i]}. ${o}</button>`);
+if(t=="mc")q[2].forEach((o,i)=>h+=`<button class="opt ${A[idx].includes(i)?'s':''}" onclick="tg(${i})">${A[idx].includes(i)?"☑":"☐"} ${o}</button>`);
+if(t=="cat")q[2].forEach((o,i)=>h+=`<div class="opt">${o}<div class="row" style="margin-top:6px"><button class="opt ${A[idx][i]===true?'s':''}" style="margin:0" onclick="A[idx][${i}]=true;draw()">Benar</button><button class="opt ${A[idx][i]===false?'s':''}" style="margin:0" onclick="A[idx][${i}]=false;draw()">Salah</button></div></div>`);
+h+=`</div><div class="row"><button class="o" ${idx?'':'disabled'} onclick="idx--;draw()">← Sebelumnya</button><button class="o" ${idx<Q.length-1?'':'disabled'} onclick="idx++;draw()">Berikutnya →</button></div>`;app.innerHTML=h;tick()}
+function tg(i){const a=A[idx];a.includes(i)?a.splice(a.indexOf(i),1):a.push(i);draw()}
+const ok=i=>{const q=S[cur].Q[i],a=A[i];return q[0]=="pg"?a===q[3]:q[0]=="mc"?[...a].sort().join()==q[3].join():a.join()==q[3].join()};
+function fin(){clearInterval(iv);const Q=S[cur].Q,n=Q.filter((_,i)=>ok(i)).length,sc=Math.round(n/Q.length*100);
+let h=`<div class="card"><div class="big">${sc}</div><p style="text-align:center">Benar ${n} dari ${Q.length} soal · Waktu: ${Math.round((90*60000-(t0-Date.now()))/60000)} menit</p><button onclick="clearInterval(iv);mm()">Kembali ke menu</button></div><h3>Pembahasan</h3>`;
+Q.forEach((q,i)=>{const t=q[0],k=q[3],a=A[i];let o="";
+if(t=="pg")o=q[2].map((x,j)=>`<div class="opt ${j==k?'ok':j===a?'no':''}">${"ABCD"[j]}. ${x}</div>`).join("");
+if(t=="mc")o=q[2].map((x,j)=>`<div class="opt ${k.includes(j)?'ok':a.includes(j)?'no':''}">${a.includes(j)?"☑":"☐"} ${x}</div>`).join("");
+if(t=="cat")o=q[2].map((x,j)=>`<div class="opt ${a[j]===k[j]?'ok':'no'}">${x}<br><small>Jawabanmu: ${a[j]===null?"-":a[j]?"Benar":"Salah"} · Kunci: ${k[j]?"Benar":"Salah"}</small></div>`).join("");
+h+=`<div class="card">${q[5]?`<small>(Teks bacaan: lihat soal 1 bagian Bindo)</small><br>`:""}<b>${ok(i)?"✅":"❌"} ${i+1}.</b> ${q[1].replace(/\n/g,"<br>")}${o}<div class="ex">💡 ${q[4]}</div></div>`});app.innerHTML=h;scrollTo(0,0)}
+init();
+</script></body></html>
