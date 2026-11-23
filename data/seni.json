@@ -1,0 +1,117 @@
+[
+ {
+  "tipe": "pg",
+  "soal": "Logo yang hanya memakai huruf inisial disebut ...",
+  "opsi": [
+   "Pictorial mark",
+   "Letter mark",
+   "Abstract mark",
+   "Emblem"
+  ],
+  "kunci": 1,
+  "pembahasan": "Letter mark memakai inisial; pictorial memakai gambar."
+ },
+ {
+  "tipe": "pg",
+  "soal": "Kelompok warna hangat adalah ...",
+  "opsi": [
+   "Biru, hijau, ungu",
+   "Merah, oranye, kuning",
+   "Hitam, putih, abu",
+   "Biru, putih, kuning"
+  ],
+  "kunci": 1,
+  "pembahasan": "Merah-oranye-kuning memberi kesan hangat."
+ },
+ {
+  "tipe": "pg",
+  "soal": "Kesan ruang pada gambar dibuat dengan ...",
+  "opsi": [
+   "Objek jauh digambar lebih besar",
+   "Objek dekat lebih kecil",
+   "Objek jauh lebih kecil dan pudar",
+   "Semua objek sama besar"
+  ],
+  "kunci": 2,
+  "pembahasan": "Perspektif: makin jauh makin kecil dan pudar."
+ },
+ {
+  "tipe": "pg",
+  "soal": "Fungsi malam (lilin) dalam membatik adalah ...",
+  "opsi": [
+   "Memberi warna",
+   "Menutup bagian kain agar tidak terkena warna",
+   "Melunturkan kain",
+   "Mengeraskan kain"
+  ],
+  "kunci": 1,
+  "pembahasan": "Malam menahan warna (perintang)."
+ },
+ {
+  "tipe": "pg",
+  "soal": "Urutan membatik yang benar ...",
+  "opsi": [
+   "Mewarnai, mencanting, melorod, pola",
+   "Pola, mencanting, mewarnai, melorod",
+   "Mencanting, pola, melorod, mewarnai",
+   "Pola, mewarnai, mencanting, melorod"
+  ],
+  "kunci": 1,
+  "pembahasan": "Pola → canting → pewarnaan → pelorodan malam."
+ },
+ {
+  "tipe": "pg",
+  "soal": "Huruf serif ditandai dengan ...",
+  "opsi": [
+   "Tanpa kait di ujung",
+   "Ada kait/kaki di ujung huruf",
+   "Bentuk tulisan tangan",
+   "Hiasan berlebihan"
+  ],
+  "kunci": 1,
+  "pembahasan": "Serif punya kait; sans serif tidak."
+ },
+ {
+  "tipe": "pg",
+  "soal": "Poster yang efektif memiliki ...",
+  "opsi": [
+   "Teks panjang dan padat",
+   "Pesan singkat, jelas, kontras",
+   "Warna sangat banyak",
+   "Gambar tanpa pesan"
+  ],
+  "kunci": 1,
+  "pembahasan": "Poster perlu terbaca cepat dari jauh."
+ },
+ {
+  "tipe": "mc",
+  "soal": "Yang termasuk teknik perubahan bentuk ragam hias ...",
+  "opsi": [
+   "Stilasi",
+   "Distorsi",
+   "Deformasi",
+   "Arsir"
+  ],
+  "kunci": [
+   0,
+   1,
+   2
+  ],
+  "pembahasan": "Arsir adalah teknik menggambar, bukan perubahan bentuk."
+ },
+ {
+  "tipe": "cat",
+  "soal": "Tentukan Benar/Salah tentang tipografi!",
+  "opsi": [
+   "Jarak huruf mempengaruhi keterbacaan",
+   "Jarak baca jauh cocok huruf tebal dan besar",
+   "Semakin banyak jenis font, semakin bagus"
+  ],
+  "kunci": [
+   true,
+   true,
+   false
+  ],
+  "pembahasan": "Terlalu banyak font membuat desain berantakan."
+ }
+]

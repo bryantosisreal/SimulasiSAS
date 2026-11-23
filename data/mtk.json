@@ -1,0 +1,129 @@
+[
+ {
+  "tipe": "pg",
+  "soal": "Hasil dari 12 − 5 × (−3) + 8 ÷ (−2) adalah ...",
+  "opsi": [
+   "23",
+   "−25",
+   "31",
+   "15"
+  ],
+  "kunci": 0,
+  "pembahasan": "Kali/bagi dulu: 12 + 15 − 4 = 23. B hasil mengerjakan kiri ke kanan."
+ },
+ {
+  "tipe": "pg",
+  "soal": "36 buku dan 48 pensil dibagi ke beberapa rak dengan jumlah sama. Banyak rak maksimum ...",
+  "opsi": [
+   "6",
+   "8",
+   "12",
+   "24"
+  ],
+  "kunci": 2,
+  "pembahasan": "FPB(36,48) = 12."
+ },
+ {
+  "tipe": "pg",
+  "soal": "Ani berkunjung tiap 6 hari, Budi tiap 8 hari. Mereka bersama hari ini; bersama lagi ... hari lagi.",
+  "opsi": [
+   "2",
+   "14",
+   "24",
+   "48"
+  ],
+  "kunci": 2,
+  "pembahasan": "KPK(6,8) = 24."
+ },
+ {
+  "tipe": "pg",
+  "soal": "0,666... (6 berulang) dalam pecahan paling sederhana ...",
+  "opsi": [
+   "6/9",
+   "2/3",
+   "66/100",
+   "3/2"
+  ],
+  "kunci": 1,
+  "pembahasan": "0,666... = 6/9 = 2/3 (6/9 belum sederhana)."
+ },
+ {
+  "tipe": "pg",
+  "soal": "Urutan terkecil ke terbesar: 1/2; 0,45; 55%; 3/5",
+  "opsi": [
+   "1/2; 0,45; 55%; 3/5",
+   "0,45; 1/2; 55%; 3/5",
+   "0,45; 55%; 1/2; 3/5",
+   "3/5; 55%; 1/2; 0,45"
+  ],
+  "kunci": 1,
+  "pembahasan": "Desimal: 0,5; 0,45; 0,55; 0,6 → 0,45 < 0,5 < 0,55 < 0,6."
+ },
+ {
+  "tipe": "pg",
+  "soal": "Bentuk sederhana 2(3x − 4) + 5x − 3 adalah ...",
+  "opsi": [
+   "11x − 11",
+   "11x − 5",
+   "11x + 11",
+   "8x − 11"
+  ],
+  "kunci": 0,
+  "pembahasan": "6x − 8 + 5x − 3 = 11x − 11."
+ },
+ {
+  "tipe": "pg",
+  "soal": "Penyelesaian 5(x − 2) = 3x + 4 adalah x = ...",
+  "opsi": [
+   "3",
+   "5",
+   "7",
+   "9"
+  ],
+  "kunci": 2,
+  "pembahasan": "5x − 10 = 3x + 4 → 2x = 14 → x = 7."
+ },
+ {
+  "tipe": "pg",
+  "soal": "Nilai x yang BUKAN penyelesaian 2x + 3 ≤ 11 adalah ...",
+  "opsi": [
+   "4",
+   "2",
+   "0",
+   "5"
+  ],
+  "kunci": 3,
+  "pembahasan": "x ≤ 4. Nilai 5 melebihi 4."
+ },
+ {
+  "tipe": "mc",
+  "soal": "Balok panjang 2x, lebar x, tinggi 3. Pernyataan benar ...",
+  "opsi": [
+   "Volume = 6x²",
+   "Luas alas = 2x²",
+   "Jika x = 2, volume = 24",
+   "Volume = 6x"
+  ],
+  "kunci": [
+   0,
+   1,
+   2
+  ],
+  "pembahasan": "V = 2x·x·3 = 6x²; x=2 → 24. D salah."
+ },
+ {
+  "tipe": "cat",
+  "soal": "Bentuk 4x² − 3x + 7. Tentukan Benar/Salah!",
+  "opsi": [
+   "Koefisien x² adalah 4",
+   "Konstanta adalah −3",
+   "Terdiri dari 3 suku"
+  ],
+  "kunci": [
+   true,
+   false,
+   true
+  ],
+  "pembahasan": "Konstanta = 7; −3 adalah koefisien x."
+ }
+]

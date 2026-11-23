@@ -1,0 +1,117 @@
+[
+ {
+  "tipe": "pg",
+  "soal": "Ketua BPUPKI adalah ...",
+  "opsi": [
+   "Ir. Soekarno",
+   "Mohammad Hatta",
+   "dr. Radjiman Wedyodiningrat",
+   "Soepomo"
+  ],
+  "kunci": 2,
+  "pembahasan": "Radjiman Wedyodiningrat memimpin BPUPKI. Soekarno dan Hatta memimpin PPKI."
+ },
+ {
+  "tipe": "pg",
+  "soal": "Menurut pidato Ir. Soekarno 1 Juni 1945, dasar negara yang pertama diusulkan adalah ...",
+  "opsi": [
+   "Ketuhanan",
+   "Kebangsaan Indonesia",
+   "Mufakat",
+   "Kesejahteraan"
+  ],
+  "kunci": 1,
+  "pembahasan": "Urutan Soekarno: Kebangsaan, Internasionalisme, Mufakat, Kesejahteraan, Ketuhanan."
+ },
+ {
+  "tipe": "pg",
+  "soal": "Piagam Jakarta dihasilkan oleh ...",
+  "opsi": [
+   "PPKI",
+   "Panitia Sembilan",
+   "Panitia Lima",
+   "BPUPKI sidang kedua"
+  ],
+  "kunci": 1,
+  "pembahasan": "Panitia Sembilan merumuskan Piagam Jakarta pada 22 Juni 1945."
+ },
+ {
+  "tipe": "pg",
+  "soal": "Sila pertama Piagam Jakarta diubah pada sidang PPKI 18 Agustus 1945 menjadi ...",
+  "opsi": [
+   "Kemanusiaan yang adil dan beradab",
+   "Ketuhanan Yang Maha Esa",
+   "Ketuhanan dengan kewajiban syariat bagi pemeluknya",
+   "Persatuan Indonesia"
+  ],
+  "kunci": 1,
+  "pembahasan": "Demi persatuan, kalimat tujuh kata dihapus menjadi 'Ketuhanan Yang Maha Esa'."
+ },
+ {
+  "tipe": "pg",
+  "soal": "Manusia membutuhkan bantuan orang lain untuk memenuhi kebutuhan hidup. Hal ini menunjukkan manusia sebagai makhluk ...",
+  "opsi": [
+   "Individu",
+   "Sosial",
+   "Ciptaan Tuhan",
+   "Ekonomi"
+  ],
+  "kunci": 1,
+  "pembahasan": "Saling membutuhkan = makhluk sosial."
+ },
+ {
+  "tipe": "pg",
+  "soal": "Norma yang bersumber dari hati nurani adalah norma ...",
+  "opsi": [
+   "Kesopanan",
+   "Kesusilaan",
+   "Hukum",
+   "Agama"
+  ],
+  "kunci": 1,
+  "pembahasan": "Kesusilaan berasal dari hati nurani; kesopanan dari kebiasaan pergaulan."
+ },
+ {
+  "tipe": "pg",
+  "soal": "Laut teritorial Indonesia diukur dari garis pangkal sejauh ...",
+  "opsi": [
+   "12 mil laut",
+   "200 mil laut",
+   "24 mil laut",
+   "3 mil laut"
+  ],
+  "kunci": 0,
+  "pembahasan": "Laut teritorial 12 mil laut. ZEE 200 mil laut."
+ },
+ {
+  "tipe": "mc",
+  "soal": "Hasil sidang PPKI 18 Agustus 1945 adalah ...",
+  "opsi": [
+   "Mengesahkan UUD 1945",
+   "Memilih Presiden dan Wakil Presiden",
+   "Membentuk KNIP",
+   "Menyusun Piagam Jakarta"
+  ],
+  "kunci": [
+   0,
+   1,
+   2
+  ],
+  "pembahasan": "Piagam Jakarta disusun 22 Juni oleh Panitia Sembilan, bukan hasil sidang PPKI."
+ },
+ {
+  "tipe": "cat",
+  "soal": "Tentukan Benar/Salah pernyataan tentang wilayah NKRI!",
+  "opsi": [
+   "Zona Ekonomi Eksklusif selebar 200 mil laut",
+   "Di ZEE Indonesia berdaulat penuh seperti di darat",
+   "Wilayah NKRI terdiri dari darat, laut, dan udara"
+  ],
+  "kunci": [
+   true,
+   false,
+   true
+  ],
+  "pembahasan": "Di ZEE Indonesia hanya punya hak berdaulat atas sumber daya, bukan kedaulatan penuh."
+ }
+]
