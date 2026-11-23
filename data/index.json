@@ -1,0 +1,30 @@
+[
+ {
+  "id": "bindo",
+  "nama": "Bahasa Indonesia",
+  "hari": "Selasa, 24 Nov",
+  "durasi": 90,
+  "jumlah": 40
+ },
+ {
+  "id": "pancasila",
+  "nama": "Pendidikan Pancasila",
+  "hari": "Selasa, 24 Nov",
+  "durasi": 90,
+  "jumlah": 9
+ },
+ {
+  "id": "mtk",
+  "nama": "Matematika",
+  "hari": "Kamis, 26 Nov",
+  "durasi": 90,
+  "jumlah": 10
+ },
+ {
+  "id": "seni",
+  "nama": "Seni Budaya",
+  "hari": "Kamis, 26 Nov",
+  "durasi": 90,
+  "jumlah": 9
+ }
+]
